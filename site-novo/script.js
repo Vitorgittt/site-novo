@@ -16,13 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links a');
 
-    // Abre e fecha o menu ao clicar no ícone
     menuBtn.addEventListener('click', () => {
         menuBtn.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
 
-    // Fecha o menu automaticamente quando o usuário clica em algum link
     links.forEach(link => {
         link.addEventListener('click', () => {
             menuBtn.classList.remove('active');
@@ -30,13 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. FILTRO DINÂMICO DE SOLUÇÕES/PROJETOS
+    // 3. FILTRO DINÂMICO DE SOLUÇÕES
     const filterButtons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.card');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove a classe ativa de todos os botões e adiciona no clicado
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
@@ -45,13 +42,33 @@ document.addEventListener('DOMContentLoaded', () => {
             cards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
                 
-                // Se for "all" ou a categoria bater, mostra o card. Senão, esconde.
                 if (filterValue === 'all' || filterValue === cardCategory) {
                     card.classList.remove('hidden');
                 } else {
                     card.classList.add('hidden');
                 }
             });
+        });
+    });
+
+    // 4. ACCORDION DE PERGUNTAS FREQUENTES (FAQ)
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+
+        questionBtn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('active');
+
+            // Fecha todas as perguntas abertas antes de abrir a nova
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+
+            // Se a pergunta clicada não estava aberta, ela abre agora
+            if (!isOpen) {
+                item.classList.add('active');
+            }
         });
     });
 

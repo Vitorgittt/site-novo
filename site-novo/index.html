@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Nome | Soluções Digitais para Negócios Locais</title>
+    <title>WebLocal | Soluções Digitais para Negócios Locais</title>
     <!-- Link para o Favicon -->
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <!-- Ícones Gratuitos -->
@@ -11,86 +11,145 @@
     <!-- Arquivo CSS Local -->
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<!-- Cabeçalho / Menu -->
- <header id="header">
-    <nav class="container">
-        <div class="logo">Web<span>Local</span></div>
+    <!-- Cabeçalho / Menu -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">Web<span>Local</span></div>
+            
+            <!-- Botão do Menu Mobile (Hambúrguer) -->
+            <button class="mobile-menu-btn" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-        <!-- Botão do Menu Mobile (Hambúrguer) -->
-         <button class="menu-toggle" id="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+                <li><a href="#contato" class="btn-nav">Fazer Orçamento</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Links do Menu -->
-        <ul class="menu" id="menu">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#solucoes">Soluções</a></li>
-            <li><a href="#contato" class="btn-nav">Fazer Orçamento</a></li>
-        </ul>    
-    </nav>
- </header>
-
- <!-- Hero Section -->
-  <section class="hero" id="sobre">
-    <div class="container hero-container">
-        <span class="badge">Especialistas em Negócios Digitais</span>
-        <h1>Coloque sua empresa na <br><span>Primeira Página</span> do Google</h1>
-        <p>Desenvolvo sites e landing pages de alta conversão para atrair mais clientes e aumentar as vendas do seu comércio na nossa região.</p>
-        <a href="#contato" class="btn-primary">Quero Vender Mais</a>
-    </div>
-  </section>
-
-  <!-- Seção de Soluções com Filtro Dinânico (Foco no Comércio) -->
-   <section id="solucoes" class="container section">
-    <h2>O que faço pelo seu <span>Negócio</span></h2>
-    <p class="section-subtitle">Clique nas categorias abaixo para filtrar as soluções:</p>
-
-    <!-- Filtros interativos controlados pelo JS -->
-     <div class="filters-container" class="container-section">
-        <button class="filter-btn active" data-filter="all">Ver Tudo</button>
-        <button class="filter-btn" data-filter="sites">Sites e Lojas</button>
-        <button class="filter-btn" data-filter="marketing">Vendas e SEO</button>
-     </div>
-
-     <div class="grid-projects">
-        <div class="card-body">
-            <div class="card-icon"><i class="fas fa-store"></i></div>
-            <h3>Site para Comércio Local</h3>
-            <p>Cardápio digital, agendamento de horários ou vitrine de produtos. Perfeito para restaurantes, salões e lojas.</p>
-            <div class="tags"><span>Aumento de Vendas</span>Responsivo</div>
+    <!-- Hero Section -->
+    <section class="hero" id="sobre">
+        <div class="container hero-content">
+            <span class="badge">Especialista em Negócios Locais</span>
+            <h1>Coloque sua empresa na <br><span>Primeira Página</span> do Google</h1>
+            <p>Desenvolvo sites e landing pages de alta conversão para atrair mais clientes e aumentar as vendas do seu comércio na nossa região.</p>
+            <a href="#contato" class="btn-primary">Quero Vender Mais</a>
         </div>
-     </div>
+    </section>
 
-     <!-- Item 2: Sites -->
-      <div class="card" data-category="sites">
-        <div class="card-icon"><i class="fas fa-rocket"></i></div>
-        <h3>Landing Page de Alta Conversão</h3>
-        <p>Páginas de vendas de produto único ou serviço específico, focadas 100% em fazer o cliente clicar no botão de WhatsApp.</p>
-        <div class="tags"><span>Foco em Conversão</span><span>Super Rápidos</span></div>
-      </div>
+    <!-- Seção de Soluções com Filtro Dinâmico -->
+    <section id="solucoes" class="container section">
+        <h2>O que eu faço pelo seu <span>Negócio</span></h2>
+        <p class="section-subtitle">Clique nas categorias abaixo para filtrar as soluções:</p>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Ver Tudo</button>
+            <button class="filter-btn" data-filter="sites">Sites e Lojas</button>
+            <button class="filter-btn" data-filter="marketing">Vendas e SEO</button>
+        </div>
 
-        <!-- Item 3: Marketing -->
-         <div class="card" data-category="marketing">
-            <div class="card-icon"><i class="fas fa-search-location"></i></div>
-            <h3>Otimizando para o Google (SEO)</h3>
-            <p>Configuração do seu site e do "Google Meu Negócio" para sua empresa apareça quando clientes da cidade buscarem pelo pelo seu serviço.</p>
-            <div class="tags"><span>Google Maps</span>Tráfego Organico</div>
-         </div>
-   </section>
+        <div class="grid-projects">
+            <!-- Item 1 -->
+            <div class="card" data-category="sites">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-store"></i></div>
+                    <h3>Site para Comércio Local</h3>
+                    <p>Cardápio digital, agendamento de horários ou vitrine de produtos. Perfeito para restaurantes, salões e lojas.</p>
+                    <div class="tags"><span>Aumento de Vendas</span><span>Responsivo</span></div>
+                </div>
+            </div>
 
-   <!-- Rodapé / Contato-->
+            <!-- Item 2 -->
+            <div class="card" data-category="sites">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Landing Pages de Alta Conversão</h3>
+                    <p>Páginas de vendas de produto único ou serviço específico, focadas 100% em fazer o cliente clicar no botão do WhatsApp.</p>
+                    <div class="tags"><span>Foco em Conversão</span><span>Super Rápido</span></div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="card" data-category="marketing">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-search-location"></i></div>
+                    <h3>Otimização para o Google (SEO)</h3>
+                    <p>Configuração do seu site e do "Google Meu Negócio" para que sua empresa apareça quando clientes da cidade buscarem pelo seu serviço.</p>
+                    <div class="tags"><span>Google Maps</span><span>Tráfego Grátis</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nova Seção: Perguntas Frequentes (FAQ) -->
+    <section id="faq" class="container section">
+        <h2>Perguntas <span>Frequentes</span></h2>
+        <p class="section-subtitle">Tire suas dúvidas sobre como funciona a criação do seu site:</p>
+
+        <div class="faq-container">
+            <!-- Pergunta 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Quanto tempo demora para o meu site ficar pronto?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Para landing pages e sites institucionais de comércios locais, o prazo médio de entrega é de 5 a 10 dias úteis após o envio das fotos e informações da sua empresa.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Preciso pagar mensalidade para manter o site no ar?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Você paga apenas pela criação do site. Para a hospedagem, utilizo soluções profissionais gratuitas ou de baixíssimo custo. O único gasto anual obrigatório é o registro do seu domínio (ex: sualoja.com.br), que custa cerca de R$ 40,00 por ano.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>O site vai funcionar bem no celular dos meus clientes?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Sim! Todos os projetos são 100% responsivos. O layout se adapta perfeitamente a qualquer tamanho de tela, garantindo navegação rápida e botões de WhatsApp fáceis de clicar no smartphone.</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>E se eu precisar alterar algum preço, foto ou telefone depois?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Ofereço suporte gratuito nos primeiros 30 dias após a entrega para pequenos ajustes de texto e imagens. Depois desse período, você pode solicitar atualizações avulsas sempre que precisar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé / Contato -->
     <footer id="contato">
         <div class="container footer-content">
             <h2>Pronto para dominar o <span>mercado local?</span></h2>
             <p>Clique abaixo e fale diretamente comigo para bater um papo sobre o seu negócio.</p>
             <div class="social-links">
                 <a href="https://wa.me" target="_blank" class="ws-btn"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
-                <a href="mailto:vitorcarrilhotnas@gmail.com"><i class="far fa-envelope"></i> Enviar Email</a>
+                <a href="mailto:seuemail@dominio.com"><i class="far fa-envelope"></i> Enviar E-mail</a>
             </div>
-            <p class="copy">&copy; 2026 WebLocal. Proejetado para impulsionar empresas</p>
+            <p class="copy">&copy; 2026 WebLocal. Projetado para impulsionar empresas.</p>
         </div>
     </footer>
 
