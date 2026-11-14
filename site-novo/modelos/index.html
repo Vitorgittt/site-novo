@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braseiro Burger | Cardápio Digital</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="delivery.css">
+</head>
+<body>
+
+    <div class="demo-bar">
+        Modelo demonstrativo criado por <strong>WebLocal</strong> • <a href="../index.html">Voltar ao Portfólio</a>
+    </div>
+
+    <header>
+        <div class="status-badge"><i class="fas fa-circle"></i> Aberto Agora • Entrega 35-45 min</div>
+        <h1>Braseiro Burger</h1>
+        <p>Hambúrgueres artesanais feitos na brasa • Recanto das Emas / DF</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Mais Pedidos</h2>
+        <div class="menu-grid">
+            <div class="item-card">
+                <div>
+                    <h3>Clássico da Casa</h3>
+                    <p>Pão brioche, blend bovino 160g na brasa, queijo cheddar duplo, cebola caramelizada e maionese da casa.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="price">R$ 28,90</span>
+                    <button class="btn-add" data-name="Clássico da Casa" data-price="28.90">+ Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div>
+                    <h3>Bacon Supreme</h3>
+                    <p>Pão australiano, dois blends 140g, muito bacon crocante, queijo prato derretido e molho barbecue.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="price">R$ 36,90</span>
+                    <button class="btn-add" data-name="Bacon Supreme" data-price="36.90">+ Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div>
+                    <h3>Combo Duplo + Fritas</h3>
+                    <p>2 Clássicos da Casa + 1 porção grande de batata frita rústica com alecrim e refrigerante 1,5L.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="price">R$ 64,90</span>
+                    <button class="btn-add" data-name="Combo Duplo + Fritas" data-price="64.90">+ Adicionar</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Bebidas & Acompanhamentos</h2>
+        <div class="menu-grid">
+            <div class="item-card">
+                <div>
+                    <h3>Batata Rústica Especial</h3>
+                    <p>Porção generosa de batatas temperadas com páprica e alho frito.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="price">R$ 16,00</span>
+                    <button class="btn-add" data-name="Batata Rústica Especial" data-price="16.00">+ Adicionar</button>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div>
+                    <h3>Refrigerante Lata 350ml</h3>
+                    <p>Coca-Cola, Guaraná Antarctica ou Sprite gelados.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="price">R$ 6,50</span>
+                    <button class="btn-add" data-name="Refrigerante Lata" data-price="6.50">+ Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrinho Flutuante -->
+    <div class="cart-bar">
+        <div class="cart-info">
+            Itens: <span id="cart-count">0</span> | Total: <span id="cart-total">R$ 0,00</span>
+        </div>
+        <div class="cart-actions">
+            <button class="btn-clear" id="clear-btn" title="Limpar carrinho" disabled>
+                <i class="fas fa-trash"></i>
+            </button>
+            <button class="btn-checkout" id="checkout-btn" disabled>
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido
+            </button>
+        </div>
+    </div>
+
+    <script src="delivery.js"></script>
+</body>
+</html>
