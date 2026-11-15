@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `Quais horários vocês têm disponíveis?`;
 
         const phone = "5561991459292";
-        const url = `https://whatsapp.com{phone}&text=${encodeURIComponent(message)}`;
+        const url = `https://whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
 
         window.open(url, '_blank');
     });
