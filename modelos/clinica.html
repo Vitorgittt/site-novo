@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence Odonto & Estética | Agende sua Avaliação</title>
+    <link rel="icon" type="image/png" href="../assets/favicon-clinica.png">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="clinica.css">
+</head>
+<body>
+
+    <div class="demo-bar">
+        Modelo demonstrativo criado por <strong>WebLocal</strong> • <a href="../index.html">Voltar ao Portfólio</a>
+    </div>
+
+    <header>
+        <div class="container header-grid">
+            <div class="header-text">
+                <span class="badge"><i class="fas fa-shield-alt"></i> Atendimento Humanizado</span>
+                <h1>Transforme o seu <span>Sorriso</span> com Tecnologia e Conforto</h1>
+                <p>Especialistas em implantes, lentes de contato dental, clareamento a laser e harmonização facial sem dor.</p>
+                <a href="#avaliacao" class="btn-primary">Agendar Avaliação</a>
+            </div>
+            <div class="header-image">
+                <img src="https://unsplash.com" alt="Consultório Odontológico Moderno">
+            </div>
+        </div>
+    </header>
+
+    <!-- Tratamentos -->
+    <section class="container section">
+        <h2 class="section-title">Nossos <span>Tratamentos</span></h2>
+        <p class="section-subtitle">Clique no procedimento desejado para selecionar na agenda abaixo:</p>
+
+        <div class="treatments-grid">
+            <div class="treatment-card" data-treatment="Avaliação Geral e Limpeza">
+                <div class="icon-box"><i class="fas fa-tooth"></i></div>
+                <h3>Limpeza & Prevenção</h3>
+                <p>Remoção de tártaro com ultrassom e profilaxia completa para manter sua saúde bucal em dia.</p>
+            </div>
+
+            <div class="treatment-card" data-treatment="Clareamento Dental a Laser">
+                <div class="icon-box"><i class="fas fa-sparkles"></i></div>
+                <h3>Clareamento a Laser</h3>
+                <p>Resultados visíveis já na primeira sessão com técnica segura que reduz a sensibilidade.</p>
+            </div>
+
+            <div class="treatment-card" data-treatment="Lentes de Contato Dental">
+                <div class="icon-box"><i class="fas fa-smile-beam"></i></div>
+                <h3>Lentes de Contato</h3>
+                <p>Planejamento digital do sorriso com lâminas ultrafinas de porcelana de alta durabilidade.</p>
+            </div>
+
+            <div class="treatment-card" data-treatment="Implantes e Próteses">
+                <div class="icon-box"><i class="fas fa-medkit"></i></div>
+                <h3>Implantes Dentários</h3>
+                <p>Recupere a segurança ao mastigar e sorrir com implantes modernos e rápida recuperação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Avaliação -->
+    <section id="avaliacao" class="booking-section">
+        <div class="container">
+            <div class="booking-box">
+                <h2>Agende sua <span>Avaliação</span></h2>
+                <p>Preencha os dados abaixo e nossa recepção confirmará seu horário pelo WhatsApp.</p>
+
+                <form id="clinic-form">
+                    <div class="form-group">
+                        <label for="patient-name">Nome Completo</label>
+                        <input type="text" id="patient-name" placeholder="Ex: Mariana Silva" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="treatment-select">Tratamento de Interesse</label>
+                            <select id="treatment-select" required>
+                                <option value="Avaliação Geral e Limpeza">Avaliação Geral e Limpeza</option>
+                                <option value="Clareamento Dental a Laser">Clareamento Dental a Laser</option>
+                                <option value="Lentes de Contato Dental">Lentes de Contato Dental</option>
+                                <option value="Implantes e Próteses">Implantes e Próteses</option>
+                                <option value="Ortodontia / Aparelho Invisível">Ortodontia / Aparelho Invisível</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="period-select">Melhor Período</label>
+                            <select id="period-select" required>
+                                <option value="Manhã (08h às 12h)">Manhã (08h às 12h)</option>
+                                <option value="Tarde (14h às 18h)">Tarde (14h às 18h)</option>
+                                <option value="Noite (18h às 20h)">Noite (18h às 20h)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Solicitar Horário no WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><i class="fas fa-clock"></i> Segunda a Sexta, das 08h às 20h • Sábado das 08h às 13h</p>
+    </footer>
+
+    <script src="clinica.js"></script>
+</body>
+</html>
