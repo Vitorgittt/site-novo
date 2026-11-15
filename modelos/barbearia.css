@@ -1,0 +1,254 @@
+:root {
+    --bg: #0f0f0f;
+    --card: #18181b;
+    --gold: #d97706;
+    --gold-hover: #b45309;
+    --text: #fafafa;
+    --muted: #a1a1aa;
+    --green: #22c55e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+span {
+    color: var(--gold);
+}
+
+/* Barra de Demonstração */
+.demo-bar {
+    background-color: #27272a;
+    color: #e4e4e7;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #3f3f46;
+}
+
+.demo-bar a {
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(15,15,15,0.95)), url('https://unsplash.com') center/cover;
+    padding: 90px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(217, 119, 6, 0.15);
+    color: var(--gold);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid rgba(217, 119, 6, 0.4);
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--muted);
+    max-width: 550px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--gold);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+}
+
+/* Container & Seções */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 35px;
+    font-size: 0.95rem;
+}
+
+/* Grid de Serviços */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+}
+
+.service-card {
+    background-color: var(--card);
+    border: 1px solid #27272a;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.service-card:hover, .service-card.selected {
+    border-color: var(--gold);
+    background-color: #201c18;
+    transform: translateY(-2px);
+}
+
+.service-info h3 {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+.service-info p {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+/* Caixa de Agendamento */
+.booking-box {
+    background-color: var(--card);
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 35px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.booking-box h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.booking-box > p {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #e4e4e7;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f0f0f;
+    border: 1px solid #3f3f46;
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--gold);
+}
+
+.btn-whatsapp {
+    width: 100%;
+    background-color: var(--green);
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.btn-whatsapp:hover {
+    filter: brightness(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #27272a;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 2.3rem; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .booking-box { padding: 25px 20px; }
+}

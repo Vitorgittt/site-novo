@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navalha Club | Barbearia & Estilo</title>
+    <link rel="icon" type="image/png" href="../assets/favicon-weblocal.png">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="barbearia.css">
+</head>
+<body>
+
+    <div class="demo-bar">
+        Modelo demonstrativo criado por <strong>WebLocal</strong> • <a href="../index.html">Voltar ao Portfólio</a>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <span class="badge"><i class="fas fa-cut"></i> Tradição & Estilo</span>
+            <h1>Navalha <span>Club</span></h1>
+            <p>Cortes clássicos, degradê na régua e barba terapêutica com toalha quente.</p>
+            <a href="#agendar" class="btn-primary">Agendar Horário Agora</a>
+        </div>
+    </header>
+
+    <!-- Tabela de Serviços -->
+    <section class="container section">
+        <h2 class="section-title">Nossos <span>Serviços</span></h2>
+        <p class="section-subtitle">Clique em um serviço para selecioná-lo automaticamente no agendamento:</p>
+
+        <div class="services-grid">
+            <div class="service-card" data-service="Corte Degradê / Social (R$ 45,00)">
+                <div class="service-info">
+                    <h3>Corte Degradê / Social</h3>
+                    <p>Acabamento na navalha, lavagem e finalização com pomada.</p>
+                </div>
+                <span class="price">R$ 45,00</span>
+            </div>
+
+            <div class="service-card" data-service="Barba Terapêutica (R$ 35,00)">
+                <div class="service-info">
+                    <h3>Barba Terapêutica</h3>
+                    <p>Toalha quente, esfoliação facial, alinhamento e óleo hidratante.</p>
+                </div>
+                <span class="price">R$ 35,00</span>
+            </div>
+
+            <div class="service-card" data-service="Combo Corte + Barba (R$ 70,00)">
+                <div class="service-info">
+                    <h3>Combo Corte + Barba</h3>
+                    <p>O pacote completo com desconto especial + sobrancelha grátis.</p>
+                </div>
+                <span class="price">R$ 70,00</span>
+            </div>
+
+            <div class="service-card" data-service="Sobrancelha na Navalha (R$ 15,00)">
+                <div class="service-info">
+                    <h3>Sobrancelha na Navalha</h3>
+                    <p>Limpeza e alinhamento natural preservando o formato masculino.</p>
+                </div>
+                <span class="price">R$ 15,00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Agendamento -->
+    <section id="agendar" class="container section">
+        <div class="booking-box">
+            <h2>Agende seu <span>Horário</span></h2>
+            <p>Escolha os detalhes abaixo e confirme direto pelo WhatsApp sem esperar resposta.</p>
+
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="client-name">Seu Nome</label>
+                    <input type="text" id="client-name" placeholder="Ex: Carlos Eduardo" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service-select">Serviço Desejado</label>
+                        <select id="service-select" required>
+                            <option value="" disabled selected>Selecione um serviço...</option>
+                            <option value="Corte Degradê / Social (R$ 45,00)">Corte Degradê / Social - R$ 45,00</option>
+                            <option value="Barba Terapêutica (R$ 35,00)">Barba Terapêutica - R$ 35,00</option>
+                            <option value="Combo Corte + Barba (R$ 70,00)">Combo Corte + Barba - R$ 70,00</option>
+                            <option value="Sobrancelha na Navalha (R$ 15,00)">Sobrancelha na Navalha - R$ 15,00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="barber-select">Profissional</label>
+                        <select id="barber-select" required>
+                            <option value="Qualquer barbeiro disponível">Tanto faz (Mais rápido)</option>
+                            <option value="Lucas (Especialista em Degradê)">Lucas</option>
+                            <option value="Rafael (Barba e Clássicos)">Rafael</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-date">Data</label>
+                        <input type="date" id="booking-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-time">Horário Preferido</label>
+                        <select id="booking-time" required>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Confirmar Agendamento no WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p><i class="fas fa-map-marker-alt"></i> Av. Central, Loja 04 • Terça a Sábado, das 09h às 20h</p>
+    </footer>
+
+    <script src="barbearia.js"></script>
+</body>
+</html>
